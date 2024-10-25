@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수선언(번호를 선택하면 번호에 맞는 이미지를 보여줌)
+        function select1(number){
+            if(number>=1 && number<=3){
+                window.document.write('<img src="./media/food'+number+'.png" alt="햄버거"><br>');
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //변수선언
+        let number, flag;
+        number = parseInt(prompt("1. 햄버거 2. 피자 3. 감자튀김", "1"))
+        flag = window.select1(number);
+        if(flag==true){
+            window.document.write("식사 맛있게 하세요");
+        }else{
+            window.document.write("없는 메뉴임");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
