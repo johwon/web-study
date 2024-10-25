@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <script src="https://kit.fontawesome.com/7ab22df35b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        nav{
+            width: 80%;
+            height: 65px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px dotted rgb(1, 6, 146);
+            background-color: lightsteelblue;
+            font-family: "Oxanium", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        i{
+            font-size: 50px;
+        }
+        .nav_logo{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .nav_logo p{
+            padding-left: 10px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        div.nav_logo :hover{
+            color: black;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        .nav_menu li{
+            padding-right: 10px;
+        }
+        li{
+            /* font-size: large; */
+            font-weight: 600;
+            padding: 1px 10px;
+        }
+        .nav_sns a{
+            color: black;
+        }
+        li:hover{
+            color: rgb(43, 107, 191);
+            font-style: italic;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <p><a href="#">MY PAGE</a></p>
+        </div>
+
+        <ul class="nav_menu">
+            <a href="#"><li>자유게시판</li></a>
+            <a href="#"><li>갤러리</li></a>
+            <a href="#"><li>방명록</li></a>
+        </ul>
+            
+        <ul class="nav_sns">
+            <a href="#"><li><i class="fa-brands fa-blogger-b"></i></li></a>
+            <a href="#"><li><i class="fa-brands fa-instagram"></i></li></a>
+            <a href="#"><li><i class="fa-brands fa-facebook"></i></i></li></a>
+        </ul>
+    </nav>
+</body>
+</html>
