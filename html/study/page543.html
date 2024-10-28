@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor(colorName){
+            let h1Array = window.document.getElementsByTagName("h1");
+            h1Array[0].style.backgroundColor=colorName;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="change">color</h1>
+    <!-- <button type="button" onclick="alert('버튼을 클릭했습니다.')">Green</button>
+    <button type="button" onclick="alert('버튼을 클릭했습니다.')">Orange</button>
+    <button type="button" onclick="alert('버튼을 클릭했습니다.')">Purple</button> -->
+    <button type="button" onclick="changeColor('Green')">Green</button>
+    <button type="button" onclick="changeColor('Orange')">Orange</button>
+    <button type="button" onclick="changeColor('Purple')">Purple</button>
+
+</body>
+</html>

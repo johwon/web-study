@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function showDetail(){
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.display = "none";
+        }
+        function closeDetail(){
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+
+        }
+    </script>
+    <style>
+        #open{
+            position: relative;
+            right: 90px;
+        }
+        #desc{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="../chapter06/media/chicken.png" alt="">
+    <button class="over" id="open" onclick="showDetail()">상세설명보기</button>
+    <div id="desc" class="detail">
+        <h3>치킨</h3>
+        <p>치킨에 대한 설명~~</p>
+        <button id="close" onclick="closeDetail()">상세설명닫기</button>
+    </div>
+</body>
+</html>
