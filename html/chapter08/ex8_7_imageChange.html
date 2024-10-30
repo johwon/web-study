@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        aside{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .banner{
+            width: 300px;
+            height: 150px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+        }
+    </style>
+    <script>
+        function onLoad(){
+            let img = document.querySelector('img');
+            const btn = document.querySelector('button');
+
+            btn.addEventListener("click",imgChange);
+
+            function imgChange(){
+                let num = Math.floor(Math.random()*(2-0+1)+0);
+                let srcData = `./media/rpc${num}.png`;
+                img.src = srcData;
+            }
+            let intervalID = setInterval(imgChange, 3000);
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <aside>
+        <div class="banner">
+            <a href="#"><img src="./media/rpc0.png" alt=""></a> <br>
+            <button type="button">Change</button>
+        </div>
+    </aside>
+</body>
+</html>
