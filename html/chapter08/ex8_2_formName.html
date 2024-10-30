@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    b{
+        font-size: small;
+        color: red;
+        opacity: 0.5;
+    }
+</style>
+<body>
+    <form action="login.jsp" method="post" name="login">
+        <label for="userID" >사용자ID</label> <br>
+        <input type="text" name="userID" id="userID"><span></span> <br>
+        <label for="pwd">패스워드</label> <br>
+        <input type="password" name="userpwd" id="pwd"><span></span> <br>
+        <button type="button">log in</button>
+    </form>
+
+    <script>
+        //이벤트를 설정할 객체를 찾는다.
+        const btnObj = document.querySelector('[type="button"]');
+
+        // 이벤트 설정한다
+        btnObj.addEventListener("click",function(){
+            const userID = document.login.userID;
+            const pwd = document.querySelector("#pwd");
+            // const userID = document.querySelector("#userID");
+            if(userID.value.length < 8 || userID.value.length > 14){
+                userID.nextSibling.innerHTML = `<b> 8글자에서 14글자 사이로 입력하세요</b>`;
+                userID.value="";
+                userID.focus();
+                return;
+            }else{
+                userID.nextSibling.innerHTML = `성공`;
+            }
+            if(pwd.value.length < 8 || pwd.value.length > 14){
+                pwd.nextSibling.innerHTML = `<b> 8글자에서 14글자 사이로 입력하세요</b>`;
+                pwd.value="";
+                pwd.focus();
+                return;
+            }else{
+                pwd.nextSibling.innerHTML = `성공`;
+            }
+            alert("입력성공");
+        });
+        
+    </script>
+
+</body>
+</html>
