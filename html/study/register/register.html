@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="https://kit.fontawesome.com/7ab22df35b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i><h1>K-SHOP</h1></a>
+            <ul>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li class="dropdown">
+                    <a href="#">menu</a>
+                    <div class="dropdown_content">
+                        <a href="#">1.menu</a>
+                        <a href="#">2.menu</a>
+                        <a href="#">3.menu</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="header_icon">
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="#"><i class="fa-regular fa-comments"></i></a>
+            </div>
+        </header>
+
+
+        <main>
+            <nav></nav>
+            <section class="form">
+                <h2>회원가입</h2>
+                <form action="#">
+                    <div class="아이디">
+                        <label for="id">아이디</label> <br>
+                    </div>
+                    <input type="text" name="id" id="id">
+                    <input type="text" name="idEmail" id="idEmail" placeholder="@naver.com"> <br>
+                    <label for="pwd">비밀번호</label> <br>
+                    <input type="text" name="pwd" id="pwd"> <br>
+                    <label for="pwd">비밀번호 재확인</label> <br>
+                    <input type="text" name="pwd" id="pwd"> <br>
+                    <label for="name">이름</label> <br>
+                    <input type="text" name="name" id="name"> <br>
+                    <div class="생년월일">
+                        <label for="pwd">생년월일</label> <br> 
+                        <input type="number" placeholder="년(4자)">년
+                        <select name="month" id="month">
+                            <option value="month">1</option>
+                            <option value="month">2</option>
+                            <option value="month">3</option>
+                            <option value="month">4</option>
+                            <option value="month">5</option>
+                            <option value="month">6</option>
+                            <option value="month">7</option>
+                            <option value="month">8</option>
+                            <option value="month">9</option>
+                            <option value="month">10</option>
+                            <option value="month">11</option>
+                            <option value="month">12</option>
+                        </select>월
+                        <input type="number">일 <br>
+                    </div>
+                    <label for="fm">성별</label> <br>
+                    <input type="text" placeholder="성별" name="fm" id="fm"> <br>
+                    <label for="checkEmail">본인 확인 이메일<span>(선택)</span></label> <br>
+                    <input type="text" name="checkEmail" id="checkEmail" placeholder="선택입력"> <br>
+                    <label for="phoneNum">휴대전화</label> <br>
+                    <input type="tel" name="phoneNum" id="phoneNum" placeholder="전화번호 입력">
+                    <button type="button">인증번호 받기</button><br>
+    
+                    <input type="text" name="Certified" id="Certified" placeholder="인증번호를 입력하시오">
+                    <br>
+                    <button type="submit">가입하기</button>
+                    
+                </form>
+            </section>
+            <aside></aside>
+        </main>
+
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
