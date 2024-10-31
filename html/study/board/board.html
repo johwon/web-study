@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7ab22df35b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="board.css">
+    <script src="board.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="header_logo">
+            <i class="fa-solid fa-tree"></i>
+            <h1>몽글</h1>
+        </a>
+        <ul>
+            <a href="#"><li>MENU1</li></a>
+            <a href="#"><li>MENU2</li></a>
+            <a href="#"><li>MENU3</li></a>
+            <a href="#"><li>MENU4</li></a>
+            <a href="#" class="sign"><li>SIGN UP</li></a>
+        </ul>
+    </header>
+
+    <div class="carousel" onload="carousel();">
+        <div class="slides">
+            <img src="./meida/mountains-6531903_1280.jpg" alt="">
+            <img src="./meida/mountains-6721870_1280.jpg" alt="">
+            <img src="./meida/mountains-8451480_1280.jpg" alt="">
+        </div>
+        <div class="left">
+            <a href="#" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
+            <a href="#" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
+        </div>
+        <div class="dot">
+            <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+        </div>
+    </div>
+
+    <main>
+    <div class="main_center">
+        <aside>
+            <h2>국민소통</h2>
+            <hr>
+                <ul class="nav1">
+                    <a href="#"><strong>국민참여</strong></a>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">칭찬합시다</a></li>
+                    <li><a href="#">궁금합니다</a></li>
+                    <li><a href="#">제안합니다</a></li>
+                    <li><a href="#">국민신고방(불법산행)</a></li>
+                </ul>
+                <ul class="nav2">
+                    <a href="#"><strong>혁신제안</strong></a>
+                    <li><a href="#">기업성장응답센터</a></li>
+                    <li><a href="#">사회적가치, 혁신 우수사례</a></li>
+                </ul>
+                <ul class="nav3">
+                    <a href="#"><strong>클린신고센터</strong></a>
+                    <li><a href="#">공익신고</a></li>
+                    <li><a href="#">소극행정신고</a></li>
+                    <li><a href="#">갑질신고</a></li>
+                    <li><a href="#">청탁금지법 위반신고</a></li>
+                    <li><a href="#">사이버감사실</a></li>
+                    <li><a href="#">예산낭비신고</a></li>
+                    <li><a href="#">갑질행위 공개</a></li>
+                </ul>
+        </aside>
+        <section>
+            <div class="section_top">
+                <h2>칭찬합시다</h2>
+                <div class="section_nav">
+                    <a href="#">국립공원공단</a>
+                    <a href="#">국민소통</a>
+                    <a href="#">국민참여</a>
+                    <a href="#">칭찬합시다</a>
+                </div>
+            </div>
+            <span>본 게시판과 관련이 없거나 상업적인 내용, 특정인이나 특정사안을 비방하는 내용 등은 예고없이 삭제될 수 있습니다.</span>
+            <div class="section_select">
+                <div>
+                    <select name="page" id="page">
+                        <option value="10">10개씩</option>
+                        <option value="20">20개씩</option>
+                    </select>
+                    <button type="button">보기</button>
+                </div>
+                <div>
+                    <select name="" id="">
+                        <option value="title">제목</option>
+                        <option value="user">작성자</option>
+                    </select>
+                    <input type="text" name="search" id="search">
+                    <button type="button">검색</button>
+                </div>
+            </div>
+            <div class="section_main">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>공원명</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>조회수</th>
+                            <th>등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5417</td>
+                            <td>북한산</td>
+                            <td>북한산 국립공원 특수산악구조대 전세호 주임님과 유동욱 주임님 정말 감사했습니다!!!</td>
+                            <td>안준모</td>
+                            <td>52</td>
+                            <td>2022.12.20</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                        <tr>
+                            <td>5416</td>
+                            <td>태백산</td>
+                            <td>아직 어린 태백산국립공원을 응원합니다.</td>
+                            <td>이금녀</td>
+                            <td>99</td>
+                            <td>2022.12.11</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table_page">
+                    <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+</body>
+</html>
