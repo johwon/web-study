@@ -42,4 +42,6 @@ function carousel(){
         },3000);
     }
 
+    startTimer();
+
 }
