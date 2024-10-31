@@ -35,52 +35,58 @@ i{
 }
 
 /* 회전목마 */
-.carousel{
-    border: 2px solid red;
-    height: 600px;
+div.slideshow{
+    background-color: rgb(237, 249, 240);
+    height: 465px;
+    min-width: 960px;
     position: relative;
 }
-.slides{
+div.slideshow_slides{
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.slides img{
+div.slideshow_slides a{
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
+    display: inline-block;
+    text-align: center;
 }
-
-.left{
+div.slideshow_slides img{
+    width: 900px;
+    height: 465px;
+}
+div.slideshow_nav a{
     position: absolute;
     left: 50%;
     top: 50%;
-}
-.left i{
-    position: absolute;
-    font-size: 50px;
-    color: black;
+    color: rgb(67, 105, 49);
+    font-size: 62px;
     transform: translateY(-50%);
-}
-.prev{
-    margin-left: -500px;
-}
-.next{
-    margin-left: 450px;
+    opacity: 0.5;
 }
 
-.dot{
+div.slideshow_nav a.prev{
+    margin-left: -462px;
+}
+div.slideshow_nav a.next{
+    margin-left: 430px;
+}
+div.slideshow_indicator{
     position: absolute;
-    left: 43%;
     bottom: 20px;
-    display: flex;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
-.dot i{
-    margin: 20px;
-    font-size: 40px;
-    color: black;
+div.slideshow_indicator a{
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
 }
-.dot i:hover{
+div.slideshow_indicator a.active{
     color: green;
 }
 
@@ -88,17 +94,24 @@ i{
 main{
     width: 100%;
     height: 100%;
+    display: flex;
+}
+main * :not(main h2){
+    font-size: small;
+}
+.main_aside{
+    width: 600px;
 }
 .main_center{
     display: flex;
-    width: 1300px;
+    width: 1200px;
     margin: 0 auto;
 }
 aside{
     width: 300px;
 }
 aside *{
-    margin: 15px;
+    margin: 10px;
 }
 section{
     width: 1000px;
@@ -123,8 +136,9 @@ thead{
     background-color: grey;
 }
 th, td{
-    padding: 5px;
+    padding: 8px;
     text-align: center;
+    
 }
 .section_main{
     position: relative;

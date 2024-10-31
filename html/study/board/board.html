@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="board.css">
     <script src="board.js"></script>
 </head>
-<body>
+<body onload="carousel();">
     <header>
         <a href="#" class="header_logo">
             <i class="fa-solid fa-tree"></i>
@@ -23,17 +23,17 @@
         </ul>
     </header>
 
-    <div class="carousel" onload="carousel();">
-        <div class="slides">
-            <img src="./meida/mountains-6531903_1280.jpg" alt="">
-            <img src="./meida/mountains-6721870_1280.jpg" alt="">
-            <img src="./meida/mountains-8451480_1280.jpg" alt="">
+    <div class="slideshow">
+        <div class="slideshow_slides">
+            <a href="#"><img src="./meida/mountains-6531903_1280.jpg" alt=""></a>
+            <a href="#"><img src="./meida/mountains-6721870_1280.jpg" alt=""></a>
+            <a href="#"><img src="./meida/mountains-8451480_1280.jpg" alt=""></a>
         </div>
-        <div class="left">
+        <div class="slideshow_nav">
             <a href="#" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
             <a href="#" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
         </div>
-        <div class="dot">
+        <div class="slideshow_indicator">
             <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
             <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
             <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
@@ -41,6 +41,8 @@
     </div>
 
     <main>
+    <div class="main_aside">
+    </div>
     <div class="main_center">
         <aside>
             <h2>국민소통</h2>
@@ -198,6 +200,7 @@
             </div>
         </section>
     </div>
+    <div class="main_aside"></div>
     </main>
 </body>
 </html>

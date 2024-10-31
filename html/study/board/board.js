@@ -1,45 +1,46 @@
 //객체 가져오기
 function carousel(){
-    let carousel = document.querySelector(".carousel");
-    let slides = document.querySelector(".slides");
-    let imgArray = document.querySelectorAll("[type=`img`]");
+    //화면객체 가져온다
+    let slideshow = document.querySelector(".slideshow");
+    let slideshow_slides = document.querySelector(".slideshow_slides");
+    let slidesArray = document.querySelectorAll(".slideshow_slides a");
 
-    let left = document.querySelector(".left");
+    let slideshow_nav = document.querySelector(".slideshow_nav");
     let prev = document.querySelector(".prev");
     let next = document.querySelector(".next");
 
-    let dot = document.querySelector(".dot");
-    let dotArray = document.querySelectorAll(".dot a");
-
-    // 현재이미지 인덱스, 인터벌 아이디, 슬라이드 개수
+    let indicatorArray = document.querySelectorAll(".slideshow_indicator a");
+    
+    //현재이미지 인덱스, 인터벌 아이디, 슬라이드 개수
     let currentIndex = 0;
     let timerID = null;
-    let slideCount = imgArray.length;
+    let slideCount = slidesArray.length;
 
-    // 현재이미지 한줄 정렬
-    for(let i=0; i<slideCount;i++){
+    //현재이미지를 한줄로 정렬
+    for(let i=0;i<slideCount;i++){
         let newLeft = `${i*100}%`
-        imgArray[i].style.left = newLeft;
+        slidesArray[i].style.left = newLeft;
     }
 
-    // 화면전환해주는 함수
+    //화면 전환해주는 함수
     function gotoslide(index){
         currentIndex = index;
-        let newLeft = `${index*-100}%`;
-        slides.style.left = newLeft;
-
+        let newLeft = `${index * -100}%`;
+        slideshow_slides.style.left = newLeft; 
+    
+        //indicator 그 위치를 가리켜야함
         for(let i=0;i<slideCount;i++){
-            dotArray[i].classList.remove;
+            indicatorArray[i].classList.remove('active');
         }
-        dotArray[index].classList.add('active');
-    }
+        indicatorArray[index].classList.add('active');
+    } //end of gotoslide
 
     function startTimer(){
         timerID = setInterval(()=>{
-            let index = (currentIndex+1)%slideCount;
+            let index = (currentIndex + 1) % slideCount;
             currentIndex = index;
             gotoslide(index);
         },3000);
     }
-
+    startTimer();
 }
