@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad(){
+            //객체찾기
+            const img = document.querySelector('img');
+            // 이벤트걸기(document에)
+            window.document.addEventListener("mousemove",(event)=>{
+                //마우스 이벤트 정보를 통해서 위치값을 가져옴
+                const x = event.clientX;
+                const y = event.clientY;
+                img.style.transform = `translate(${x}px, ${y}px)`;
+            })
+
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <img src="./media/photo3.png" alt="">
+</body>
+</html>
