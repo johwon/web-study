@@ -24,6 +24,8 @@ header ul, a{
 }
 header ul{
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 header a{
     margin: 20px;
@@ -32,6 +34,11 @@ header a{
 }
 i{
     font-size: 30px;
+}
+.sign{
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* 회전목마 */
@@ -98,6 +105,7 @@ main{
 }
 main * :not(main h2){
     font-size: small;
+    margin:8px
 }
 .main_aside{
     width: 600px;
@@ -110,8 +118,15 @@ main * :not(main h2){
 aside{
     width: 300px;
 }
-aside *{
-    margin: 10px;
+aside li{
+    position: relative;
+    left: 15px;
+}
+.ul_body{
+    background-color: rgb(183, 183, 183);
+    width: 240px;
+    margin: 0;
+    padding: 10px;
 }
 section{
     width: 1000px;
@@ -131,17 +146,21 @@ section div:not(.section_main){
 table{
     margin: 0px 10px;
     width: 980px;
+    border: 0px;
 }
 thead{
-    background-color: grey;
+    background-color: rgb(183, 183, 183);
+    border-top: 2px solid green;
 }
 th, td{
     padding: 8px;
     text-align: center;
-    
 }
 .section_main{
     position: relative;
+}
+#tr1 {
+    background-color: grey;
 }
 .table_page{
     margin: 20px;
@@ -156,4 +175,8 @@ th, td{
 .table_page a:hover{
     background-color: grey;
     color: white;
+}
+footer{
+    height: 200px;
+    background-color: aliceblue;
 }

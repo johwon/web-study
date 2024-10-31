@@ -43,4 +43,66 @@ function carousel(){
         },3000);
     }
     startTimer();
+//이벤트등록, 핸들러기능
+slideshow_slides.addEventListener("mouseenter",(event)=>{
+    clearInterval(timerID);
+});
+slideshow_slides.addEventListener("mouseleave",(event)=>{
+    startTimer();
+});
+prev.addEventListener("mouseenter",(event)=>{
+    clearInterval(timerID);
+});
+prev.addEventListener("mouseleave",(event)=>{
+    startTimer();
+});
+next.addEventListener("mouseenter",(event)=>{
+    clearInterval(timerID);
+});
+next.addEventListener("mouseleave",(event)=>{
+    startTimer();
+});
+
+prev.addEventListener("click",(event)=>{
+    event.preventDefault;   //앵커 태그가 가지고 있는 기본 앵커기능(페이지이동)을 막음
+    currentIndex = currentIndex -1;
+    if(currentIndex<0){
+        currentIndex = slideCount -1;
+    }
+    gotoslide(currentIndex);
+})
+next.addEventListener("click",(event)=>{
+    event.preventDefault;   //앵커 태그가 가지고 있는 기본 앵커기능(페이지이동)을 막음
+    currentIndex = currentIndex +1;
+    if(currentIndex>(slideCount-1)){
+        currentIndex = 0;
+    }
+    gotoslide(currentIndex);
+})
+
+//indicator 클릭하면 해당된 페이지로 이동한다
+for(let i=0;i<slideCount;i++){
+    indicatorArray[i].addEventListener("mouseenter",(event)=>{
+        clearInterval(timerID);
+    })
 }
+// indicatorArray.forEach((obj)=>{
+//     obj.addEventListener("mouseenter",(event)=>{
+//         clearInterval(timerID);
+// });
+// });
+
+for(let i=0;i<slideCount;i++){
+    indicatorArray[i].addEventListener("mouseleave",(event)=>{
+        startTimer();
+    })
+}
+
+for(let i=0;i<slideCount;i++){
+    indicatorArray[i].addEventListener("click",(event)=>{
+        event.preventDefault();
+        gotoslide(i);
+    })
+}
+
+}//end of carousel
