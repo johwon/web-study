@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: aquamarine;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function onLoad(){
+            //변수선언
+            const colorString = "0123456789ABCDEF";
+            let count = 0;
+            let color = "#";
+            let timerID = null;
+            //객체 찾기
+            const divObj = document.querySelector("div");
+            // 이벤트처리
+            timerID = setInterval(styleChange, 250);
+
+            //핸들러기능
+            function styleChange(){
+                count++;
+                if(count>50){
+                    clearInterval(timerID);
+                }
+                //색상값 랜덤 설정
+                for(let i=0;i<6;i++){
+                    let index = Math.floor(Math.random()*(15-0+1)+0);
+                    let colorValue = colorString[index];
+                    color += colorValue;
+                }
+                divObj.style.backgroundColor = color;
+                divObj.style.borderRadius = `${count}%`;
+                color = "#";
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div></div>
+</body>
+</html>
