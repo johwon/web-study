@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="1.js"></script>
+    <style>
+        body{
+            background-color: rgb(233, 240, 252);
+        }
+        form{
+            background-color: #efeded;
+            width: 600px;
+            margin: 0 auto;
+            padding: 50px 20px 20px;
+        }
+        div{
+            width: 100%;
+        }
+        form label{
+            display: inline-block;
+            width: 120px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+        form input{
+            border: none;
+            background-color: #efeded;
+            border-bottom: 1px dotted black;
+        }
+        form input:not(.email input){
+            width: 400px;
+        }
+        .email input{
+            width: 185px;
+        }
+        #address2{
+            margin-left: 145px;
+        }
+        button {
+            display: block;
+            width: 570px;
+            margin: 30px auto;
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(115, 199, 157);
+            border: 0px;
+        }
+        p{
+            color: grey;
+            font-size: small;
+            margin-left: 145px;
+        }
+    </style>
+</head>
+<body onload="onLoad();">
+    <form action="#" method="post">
+        <div class="id">
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id"><p></p><br>
+        </div>
+        <div class="pwd">
+            <label for="pwd1">패스워드</label>
+            <input type="password" name="pwd1" id="pwd1"><p></p><br>
+        </div>
+        <div class="pwd2">
+            <label for="pwd2">패스워드 확인</label>
+            <input type="password" name="pwd2" id="pwd2"><p></p><br>
+        </div>
+        <div class="email">
+        <label for="email1">이메일</label>
+        <input type="text" name="email1" id="email1">
+        <span> @ </span>
+        <input type="email" name="email2" id="email2"><p></p><br>
+        </div>
+        <div class="address">
+            <label for="address">주소</label>
+            <input type="text" name="address" id="address1"><br>
+            <input type="text" name="address" id="address2"><br>
+        </div>
+
+        <button type="submit">가 입</button>
+    </form>
+</body>
+</html>
