@@ -65,13 +65,14 @@ li.dropdown{
 /* 메인 */
 main{
     display: flex;
+    width: 100%;
 }
 nav, aside{
-    width: 300px;
+    width: 500px;
     background-color: aliceblue;
 }
 section{
-    background-color: rgb(215, 215, 252);
+    background-color: rgba(231, 231, 255, 0.603);
     width: 1000px;
     display: flex;
     flex-direction: column;

@@ -6,7 +6,7 @@ function onLoad(){
     const namePattern = /^[가-힣]+$/; //한글로 입력
     const phoneNumPattern = /^\d{3}-\d{3,4}-\d{4}$/;
     const checkEmailPattern = /^[A-Za-z-0-9\-\.]+@[A-Ja-z-0-9\-\.]+\.[A-Ja-z-0-9]+$/;
-    const certifiedPattern = /^[0-9]{4}/;
+    const certifiedPattern = /^[0-9]{4}/; //숫자4자
 
     // 객체 가져오기
     const inputID = document.querySelector("#id");
