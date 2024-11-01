@@ -24,6 +24,8 @@ header ul, a{
 }
 header ul{
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 header a{
     margin: 20px;
@@ -33,58 +35,65 @@ header a{
 i{
     font-size: 30px;
 }
+.sign{
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
 /* 회전목마 */
-.carousel{
-    border: 2px solid red;
-    height: 600px;
+div.slideshow{
+    background-color: rgb(237, 249, 240);
+    height: 465px;
     min-width: 960px;
     position: relative;
 }
-.slides{
+div.slideshow_slides{
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.slides img{
-    text-align: center;
+div.slideshow_slides a{
     position: absolute;
     width: 100%;
     height: 100%;
     display: inline-block;
-    margin: 0 auto;
+    text-align: center;
 }
-
-.left{
+div.slideshow_slides img{
+    width: 900px;
+    height: 465px;
+}
+div.slideshow_nav a{
     position: absolute;
     left: 50%;
     top: 50%;
-}
-.left i{
-    position: absolute;
-    font-size: 50px;
-    color: black;
+    color: rgb(67, 105, 49);
+    font-size: 62px;
     transform: translateY(-50%);
-}
-.prev{
-    margin-left: -500px;
-}
-.next{
-    margin-left: 450px;
+    opacity: 0.5;
 }
 
-.dot{
+div.slideshow_nav a.prev{
+    margin-left: -462px;
+}
+div.slideshow_nav a.next{
+    margin-left: 430px;
+}
+div.slideshow_indicator{
     position: absolute;
-    left: 43%;
     bottom: 20px;
-    display: flex;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
-.dot i{
-    margin: 20px;
-    font-size: 40px;
-    color: black;
+div.slideshow_indicator a{
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
 }
-.dot i:hover{
+div.slideshow_indicator a.active{
     color: green;
 }
 
@@ -92,23 +101,39 @@ i{
 main{
     width: 100%;
     height: 100%;
+    display: flex;
+}
+main * :not(main h2){
+    font-size: small;
+    margin:8px
+}
+.main_aside{
+    width: 600px;
 }
 .main_center{
     display: flex;
-    width: 1300px;
+    width: 1200px;
     margin: 0 auto;
 }
 aside{
     width: 300px;
 }
-aside *{
-    margin: 15px;
+aside li{
+    position: relative;
+    left: 15px;
+}
+.ul_body{
+    background-color: rgb(225, 224, 224);
+    width: 240px;
+    margin: 0;
+    padding: 10px;
 }
 section{
     width: 1000px;
 }
 section div:not(.section_main){
     display: flex;
+    align-items: center;
 }
 .section_top, .section_select{
     justify-content: space-between;
@@ -116,22 +141,31 @@ section div:not(.section_main){
 .section_top *, span, .section_select{
     margin: 15px;
 }
+span{
+    padding: 15px;
+}
 .section_select *{
     margin: 10px 2px;
 }
 table{
     margin: 0px 10px;
     width: 980px;
+    border: 0px;
 }
-thead{
-    background-color: grey;
+thead th{
+    background-color: rgb(225, 224, 224);
+    border-top: 1px solid green;
 }
 th, td{
-    padding: 5px;
+    padding: 8px;
     text-align: center;
+    border-bottom: 1px solid rgb(251, 233, 233);
 }
 .section_main{
     position: relative;
+}
+#tr1 {
+    background-color: grey;
 }
 .table_page{
     margin: 20px;
@@ -146,4 +180,14 @@ th, td{
 .table_page a:hover{
     background-color: grey;
     color: white;
+}
+button{
+    background-color: grey;
+    color: white;
+    border: 0px;
+    padding: 3px;
+}
+footer{
+    height: 200px;
+    background-color: aliceblue;
 }

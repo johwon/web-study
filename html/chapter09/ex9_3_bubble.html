@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.parent{
+            width: 400px;
+            height: 400px;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .parent> span{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        div.child{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+        function onLoad(){
+            //객체찾기
+            const parent = document.querySelector(".parent");
+            const child = document.querySelector(".child");
+
+            //이벤트등록,핸들러처리,버블링방식
+            parent.addEventListener("click",()=>{
+                alert(`parent`);
+            })
+            child.addEventListener("click",(e)=>{
+                alert(`child`);
+                // 전파중지, 자식만 하고 끝
+                e.stopPropagation();
+            })
+            //이벤트등록,핸들러처리,캡쳐링방식
+            // parent.addEventListener("click",()=>{
+            //     alert(`parent`);
+            // },true)
+            // child.addEventListener("click",()=>{
+            //     alert(`child`);
+            // },true)
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div class="parent">
+        <span>부모영역</span>
+        <div class="child">
+            <span>자식영역</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -65,13 +65,14 @@ li.dropdown{
 /* 메인 */
 main{
     display: flex;
+    width: 100%;
 }
 nav, aside{
-    width: 300px;
+    width: 500px;
     background-color: aliceblue;
 }
 section{
-    background-color: rgb(215, 215, 252);
+    background-color: rgba(231, 231, 255, 0.603);
     width: 1000px;
     display: flex;
     flex-direction: column;
@@ -85,22 +86,34 @@ form{
     padding: 20px;
     margin: 20px;
     font-size: 15px;
+    border-radius: 20px;
 }
-form input{
+form input,select{
     background-color: aliceblue;
     height: 30px;
     border: 0px;
+    border-radius: 10px;
     margin: 5px 0px;
 }
-form *:not(.생년월일 *){
+form *:not(.생년월일 *, .아이디 *){
     width: 100%;
+}
+
+.아이디 input{
+    width: 49%;
+}
+
+.생년월일 input,select{
+    width: 30%;
 }
 
 form button{
     background-color: rgb(147, 249, 215);
+    border-radius: 5px;
     border: 0px;
     width: 100px;
     height: 35px;
+    font-weight: bold;
 }
 
 form :last-child{
