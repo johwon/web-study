@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding-top: 20px;
+        }
+        form{
+            width: 400px;
+            background-color: rgb(216, 216, 216);
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        form label{
+            display: inline-block;
+            width: 120px;
+            margin: 20px 20px 20px 0px;
+        }
+        form button{
+            display: inline-block;
+            background-color: greenyellow;
+            border: 0px;
+            width: 100%;
+            padding: 8px;
+        }
+        form #address2{
+            margin-left: 145px;
+            margin-bottom: 20px;
+        }
+        form input{
+            width: 230px;
+            border: none;
+            border-bottom: dotted black;
+            outline: none;
+            background-color: rgb(216, 216, 216);
+        }
+        #email1, #email2{
+            width: 97px;
+        }
+        form p{
+            font-size: small;
+            color: rgb(173, 172, 172);
+        }
+    </style>
+    <script>
+        function onLoad(){
+            //객체찾기
+            const pwd = document.querySelector("#pwd");
+            const pwd2 = document.querySelector("#pwd2");
+            const id = document.querySelector("#id");
+
+            //이벤트리스너 등록 및 핸들러처리
+            pwd.addEventListener("click",()=>{
+                pwd.nextSibling.innerHTML = "영문자, 대소문자, 특수문자 포함 8~32자";
+            })
+            id.addEventListener("blur", ()=>{
+                if(id.value === ""){
+                    id.nextSibling.textContent="필수입력항목";
+                }
+            })
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <form action="#" method="post">
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id"><p></p><br>
+        <label for="pwd">패스워드</label>
+        <input type="password" name="pwd" id="pwd"><p></p><br>
+        <label for="pwd2">패스워드 확인</label>
+        <input type="password" name="pwd2" id="pwd2"><br>
+        <label for="email1">이메일</label>
+        <input type="text" name="email1" id="email1">
+        <span>@</span>
+        <input type="text" name="email2" id="email2"><br>
+        <label for="address1">주소</label>
+        <input type="text" name="address1" id="address1"><br>
+        <input type="text" name="address2" id="address2"><br>
+        <button type="button">가 입</button>
+    </form>
+</body>
+</html>
