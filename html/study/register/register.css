@@ -43,7 +43,8 @@ li.dropdown{
 }
 .dropdown_content{
     display: none;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(250, 250, 209);
+    background-color: rgb(233, 233, 233);
     position: absolute;
     top: 60px;
     flex-direction: column;

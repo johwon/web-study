@@ -40,7 +40,6 @@ function onLoad(){
     inputCheckEmail.addEventListener("blur",()=>validate(inputCheckEmail, checkEmailPattern, "올바른 형식이 아닙니다."));
     inputCertified.addEventListener("blur",()=>validate(inputCertified, certifiedPattern, "4자리 숫자를 입력하세요."));
     
-
     //이벤트핸들러
     function validate(userInput, pattern, message){
         if(userInput.value.match(pattern)){
